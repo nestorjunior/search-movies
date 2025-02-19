@@ -18,7 +18,7 @@ type Movie = {
 
 export function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const moviesPerPage = 4;
+  const moviesPerPage = 8;
 
   useEffect(() => {
     const fetchMovies = async () => {

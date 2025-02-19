@@ -12,17 +12,25 @@ export const moviesApi = axios.create({
 });
 
 export const getMovies = async () => {
-  try {
-    const response = await moviesApi.get("/movie/popular", {
-      params: {
-        language: "pt-BR",
-        page: 1,
-      },
-    });
+  const allMovies = [];
+  const totalPages = 5;
 
-    return response.data.results;
+  try {
+    for (let page = 1; page <= totalPages; page++) {
+      const response = await moviesApi.get("/movie/popular", {
+        params: {
+          language: "pt-BR",
+          page: page,
+          include_adult: false,
+        },
+      });
+
+      allMovies.push(...response.data.results);
+    }
+
+    return allMovies;
   } catch (error) {
-    console.error("Erro ao buscar filmes populares", error);
+    console.error("Error search movies", error);
     return [];
   }
 };
