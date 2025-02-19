@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "strict": true,
+    "declaration": false
+  },
+  "references": [{ "path": "./tsconfig.app.json" }],
+  "include": ["src/**/*"]
+}

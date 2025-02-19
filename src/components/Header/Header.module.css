@@ -1,0 +1,10 @@
+.header {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    font-size: 1.8rem;
+  }
+}

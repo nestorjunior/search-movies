@@ -1,0 +1,40 @@
+.main {
+  flex: 1;
+}
+
+.sectionSearch {
+  margin-bottom: 50px;
+}
+
+.sectionCards {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.sectionPagination {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sectionCards {
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .sectionCards {
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 50px;
+  }
+}
