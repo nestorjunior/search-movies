@@ -42,12 +42,36 @@
   padding: 15px 25px;
 }
 
+.pagination button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .pagination .icon {
   stroke: #5d5fef;
-  cursor: pointer;
+}
+
+.pagination button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 button[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .pagination .link {
+    display: none;
+  }
+
+  .pagination .icon {
+    display: inline-flex;
+  }
+  .pagination .active {
+    display: none;
+  }
 }
