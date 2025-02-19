@@ -34,3 +34,17 @@ export const getMovies = async () => {
     return [];
   }
 };
+
+export const getMovieDetails = async (id: string) => {
+  try {
+    const response = await moviesApi.get(`/movie/${id}`, {
+      params: {
+        language: "pt-BR",
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error search details movies", error);
+    return null;
+  }
+};

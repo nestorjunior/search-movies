@@ -32,7 +32,7 @@ export function Card({
         <span className={styles.description}>
           {release_date ? `Year: ${release_date.split("-")[0]}` : "Year: N/A"}
         </span>
-        <Link to={`/movie/${id}/${title}`} className={styles.link}>
+        <Link to={`/movie/${id}`} className={styles.link}>
           {linkText}
         </Link>
       </div>

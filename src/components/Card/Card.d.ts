@@ -1,10 +1,9 @@
 interface CardProps {
-    imdbID: string;
-    Title: string;
-    Year: string;
-    Type: string;
-    Poster: string;
+    id: number;
+    title: string;
+    release_date: string;
+    poster_path: string;
     linkText: string;
 }
-export declare function Card({ imdbID, Title, Year, Type, Poster, linkText, }: CardProps): import("react/jsx-runtime").JSX.Element;
+export declare function Card({ id, title, release_date, poster_path, linkText, }: CardProps): import("react/jsx-runtime").JSX.Element;
 export {};
