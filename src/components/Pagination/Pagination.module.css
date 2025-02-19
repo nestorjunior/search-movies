@@ -28,6 +28,10 @@
   transition: background-color 0.3s ease;
 }
 
+.pagination .active button {
+  background-color: #3b3de0;
+}
+
 .pagination .link button:hover,
 .pagination .active button:hover {
   background-color: #484acd;
@@ -38,7 +42,7 @@
 .pagination .active button:focus,
 .pagination .active button:active {
   outline: none;
-  background-color: #484acd;
+  background-color: #090c6b;
   padding: 15px 25px;
 }
 
@@ -54,12 +58,12 @@
 }
 
 .pagination button[disabled] {
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: not-allowed;
 }
 
 button[disabled] {
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: not-allowed;
 }
 
@@ -71,6 +75,7 @@ button[disabled] {
   .pagination .icon {
     display: inline-flex;
   }
+
   .pagination .active {
     display: none;
   }
