@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Movie = {
   Title: string;
@@ -10,10 +10,19 @@ type Movie = {
 
 export function useSearch<T extends Movie>(items: T[]) {
   const [query, setQuery] = useState("");
+  const [filteredItems, setFilteredItems] = useState<T[]>(items);
 
-  const filteredItems = items.filter((item) =>
-    item.Title.toLowerCase().includes(query.toLowerCase())
-  );
+  useEffect(() => {
+    if (query.trim() === "") {
+      setFilteredItems(items);
+    } else {
+      setFilteredItems(
+        items.filter((item) =>
+          item.Title.toLowerCase().includes(query.toLowerCase())
+        )
+      );
+    }
+  }, [query, items]);
 
   const handleSearch = (query: string) => setQuery(query);
 
